@@ -52,6 +52,13 @@ function draw() {
 
   if(mouseX > width/2){
     console.log("right hand side");
+    background("green");
+
+  }
+
+  if (mouseX == width/2){
+    background("blue");
+    console.log("center"); 
   }
 
  //pointX = 100;
