@@ -4,7 +4,7 @@
 
 var puppy, dinosaur, sloth;
 var currentImage = 0
-//this does not work because puppy has no value at this point of the program 
+//this does not work because puppy has no value at this point of the program
 var currentAnimal = puppy;
 
 

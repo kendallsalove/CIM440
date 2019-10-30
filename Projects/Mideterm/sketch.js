@@ -18,6 +18,8 @@ function preload (){
 
 function setup() {
   // put setup code here
+
+
   createCanvas(500,400);
   cButton = createButton("Cow");
   cButton.mousePressed(function(){
@@ -35,6 +37,8 @@ function setup() {
   rButton.mousePressed(function(){
     jump = false
   });
+
+  hello(); 
 
 // jump buttons
 // jump = true;
@@ -73,6 +77,10 @@ if(jump==true){
 if(jump==false){
   xpos = 0;
   ypos = 290;
+}
+
+function hello(){
+  console.log("hello");
 }
 
 /*
