@@ -1,12 +1,3 @@
-//asteroid clone (core mechanics only)
-//arrow keys to move + x to shoot
-//"start game, press key to begin"
-
-//if page ==1
-//put in all of game codecs
-
-//if
-
 var fly;
 var frog;
 var tongue;
@@ -41,7 +32,6 @@ function setup() {
     var ang = random(360);
     var px = width/2 + 3000 * cos(radians(ang));
     var py = height/2+ 3000 * sin(radians(ang));
-    // fly.addImage('normal', flyImage);
     createFly(3, px, py);
 
   }
@@ -60,7 +50,6 @@ function setup() {
 function draw() {
   clear();
 if (mode==0) {
-  //textAllign(CENTER);
   textSize(30);
   text('Press enter to start',400,350);
   textSize(16);
@@ -73,8 +62,6 @@ if (mode==1) {
   background("blue");
 
   fill(255);
-  // textAlign(CENTER);
-  //text('Controls: Arrow Keys + X', width/2, 20);
   text('Count:' + count, width/2, 20);
 
   for(var i=0; i<allSprites.length; i++) {
@@ -88,8 +75,6 @@ if (mode==1) {
   fly.overlap(tongueTip, flyHit);
 
   if(fly.overlap(frog)){
-    //page == 2 game over
-    //add reset to first page
     console.log("hit");
     mode = 2;
 
@@ -141,7 +126,6 @@ function createFly(type, x, y) {
   a.addImage(img);
   a.setSpeed(2.5-(type/2), random(360));
   a.rotationSpeed = 0.5;
-  //a.debug = true;
   a.type = type;
 
 
@@ -155,21 +139,12 @@ function createFly(type, x, y) {
 
 function flyHit(fly) {
 
-  // for(var i=0; i<10; i++) {
-  //   var p = createSprite(bullet.position.x, bullet.position.y);
-  //   p.addImage(particleImage);
-  //   p.setSpeed(random(3, 5), random(360));
-  //   p.friction = 0.95;
-  //   p.life = 15;
-  // }
 
-  // bullet.remove();
     fly.remove();
 
     var ang = random(360);
     var px = width/2 + 3000 * cos(radians(ang));
     var py = height/2+ 3000 * sin(radians(ang));
-    // fly.addImage('normal', flyImage);
     createFly(3, px, py);
 
     //counter
