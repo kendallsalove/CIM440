@@ -38,7 +38,6 @@ function setup() {
     jump = false
   });
 
-  hello(); 
 
 // jump buttons
 // jump = true;
